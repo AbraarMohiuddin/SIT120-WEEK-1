@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Web Development!
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            h1{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class= "header">
+            <center>Deakin Web Developer's Club</center>
+        </h1>
+
+        <div class="rightcolumn">
+            <div class="card">
+              <h2>About Us</h2>
+              <p>This is Deakin's Web Development Club. Join now for an incredible experience and lifelong useful skills!.</p>
+            </div>
+            <div class="card">
+                <h2><button id="btn" onclick="showAlert()">Press me for a message!</button>
+                    <br><br>
+                    <script>
+                    function showAlert()
+                    {
+                        alert("Computers are the future of the World!")
+                        var heading3 = document.getElementById("heading3");
+                        heading3.style.color = "red";
+                    }
+                    </script></h2>
+                    <p>A checklist for learning Web Design:</p>
+                <div id="app">
+                    <!-- check the data -->
+                    <div v-for="todo in todos" :key="todo.title" :style="{ textDecoration: todo.checked? 'line-through':'none' }">
+                        <input type="checkbox" v-model="todo.checked"/>
+                        {{ todo.title }}
+                    </div>
+                </div>
+                
+              </div>
+        </div>
+
+        <div class="row">
+            <div class = "column">
+                <h2 style="color:blue;">Do you want to learn the art of Responsive Web Design?</h2>
+                <h3 id="header3">Explore the boundless realm of computers...</h3>
+                <p style="color:blue;"><i>Unleash your inner Creative!</i></p>
+        
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDw8QDxAQDw4PDxgPDxAPFQ8PDxAPFRUWFxUWFRUYHigiGRonGxUVITEhJSkrLjAuFyAzODMsNygtLisBCgoKDg0OGxAQGy0mICYtLS0uLTUtLS01LS4vLS0tLy0rKy0uNS8tLS0tLS0wLi4wLi8rLS4rLSstLS0vLi0tLf/AABEIALgBEwMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECAwUIBgT/xABPEAABAgMDBggIDAMGBwEAAAABAAIDBBEFEiEUFzFRk9MGBxNBUlRhkSIyNlVxc5SxCBYzdYGSobK00dLiI0LwJDVTYnLhJUNERYLBwxX/xAAbAQEAAgMBAQAAAAAAAAAAAAAABAUBAwYCB//EADQRAAIBAwIEBAQFAwUAAAAAAAABAgMRIQQxBRJRcUFhgZEiobHRBhPB0vAV4fEjMlJTov/aAAwDAQACEQMRAD8AmYBVogVyAtoq0VUQFKKpREBSiUVVSqApRKKtUqgLaKlFcqIC2iFXIgLaJRXIgLaKqqqoC2iUV1EQFtEKuVEBRKKqUQFKKtFWirRAUoirRVQFtEKuRAWpRXKlUBbRKKqIC2iKqICtUqrVUlAVqlVaiArVKqiICtUqrVpeFHCmUsyE2LORCwRHXIbGNL4kRwFTdaOYDnNBiNYQG8qqVUdZ57I1zWx/crncc9ka5rY/uQEh1RR1nnsjXNbH9yrnnsjXNbEfqQEiIo7zz2RrmtiP1JnosjXNbEfqQEioo7z0WRrmtiP1JnosjXNbEfqQEiIo6z0WRrmtiP1K5/HPZFdM1sf3ICREUc557I1zWx/cmeeyNc1sf3ICRkUdZ6LI1zWx/cmeiyNc1sR+pASMAqqOM9Nka5rYj9SrnpsjXNbEfqQEjIo5z02RrmtiP1I7jpsjXNbH9yAkZF4exONSy5uPDl4cWLDixXBkPlmGGx7zoaHVIBOgVpU4L2yAuVKqiIAqKqUQFKqlVcAqkICxFdREBSiUV1EogLaJRXUSiAtolFdRVogLKKEfhG/KWZ/oj++EpxooP+Ef8pZnq4/vhIDz3A7iudaUmybE42CHve3kzCMQi44t8a+NWpbrMa/ziz2d28XruJVhdY0AN0mLFptCvfGUfzV7Klv9a0BCeY1/nFns7t4mY1/nFns7t4ppyOL2d4TI4vZ3hAQtmNf5xZ7O7eJmNf5xZ7O7eKacji9neEyOL2d4QELZjX+cWezu3iZjX+cWezu3imnI4vZ3hMji9neEBC+Y1/nFns7t4h4jnn/uDPZ3bxTRkcXs7wmRxezvCAhbMa/ziz2d28TMa/ziz2d28U05HF7O8JkcXs7wgIWzGv8AOLPZ3bxMxr/OLPZ3bxTTkcXs7wmRxezvCAhbMa/ziz2d28TMa/ziz2d28U05HF7O8JkcXs7wgIWzGv8AOLPZ3bxMxr/OLPZ3bxTTkcXs7wvnnREhBhdSjogZpHPX8kBzH/8AlGStmFKl/KGXn4TOUAuXv4jDWlTTTrXWRC5g4T+U0T5zhffhrqAoClEoqogKJRVRAURVVEAREQFaJRX0SiAtolFdREAupdVUQFtFBvwkflLM9XH+9CU6KDPhJfK2Z6uP96EgPS8TE1Dg2NAiRojIUNsWLefEc1jG1iECrjgMSAvdfGiz+vyXtED9Sh6wPJF/rXfiWrw6AnKPajg+KYVs2cWPimI1sWNCrDHKFzWhwOLboaCO12nBb+Q4TSYhMEe0ZB8YDw3MjwA0u7BeXNyIDpn40Wf1+S9ogfqVJvhBJt8Ez0pCdp8OLBrSpGguHOD3Fczq6PMFxq95c6lKuJJp9P0r3TpzqS5YJt9Em37LJhtLc6VZwns+graEkTTEiPAFT6L2CxP4SyRJu2lIgcwMWASDTXf1rmnlAs0Jw1fSrij+H9ZPM0orzefZX+bRHnqoR2ydKQOEUkf+vk36rsaCPT/MVkZa0C9UzkqW9EPhg999c7QIi2crGppIUqXAacF8U2/RL6kCpxOcdoL3f2Jyj27KhwrOyjBQOLXRIV4trprfw9NFbG4SSVfBtGRbTSDFgONfriiiVkARBUXDEp4DiL9081B/WK0kXgpM1q0w3A1JJecB4R8KvoH1lU6nQTpP4LyQ03GKM0/zmoW6vftdfr1wsNztE4SyLqBloSQcTQfxoD6nmFL4V/xhk4ZpFn5O9poYsGGaeguXNAFD21wpr7FsIdmzUc3jDjP5r7w7m5quVe2krstqk401zTaS6t2+bOiPjRZ/X5L2iB+pYn8JpElpFoSQAJvN5aXN4UwxvYYrnWZkXw3XHDwgaEDEh92pAGk0rp0L6pSwo8ShI5Np/wAa8w/UpXvotc69OEeaUkl/NupqlqqMIKcpJJ7O+/bxZ0L8aLP6/Je0QP1L4bUtqUjiEyBNS8Z/LNdchRYUR90A1NGkmmI71BE/Z0OF4PLNc8aQDeNfQPF+ly2fF0P+IM9W73tWadWNSPNHbs19T1Sqxqx5o3t2a+poeE/lM/5zhfehrqKi5d4T+Uz/AJzhfehrqQrYbS26l1VRAWkJRXlUogLaKlFfRKICyiK+iIC6iUVaIgKUSirRKIClEoq0SiApRQX8JP5WzPVx/vQlOtFBfwlPlbM9XH98JAWWB5Iv9a78S1eHXuLA8kX+td+JavEvYW+MC2oqKgioOg48yAtWKNHu4aT3r2Nk8AJqNAbNPiy0rLOaHiLHifyml00aCBWo0kFaK2uCMzAn2yLgyJGilvJFjqsiB7qA1dTnBBrooVdcE0VDU1W67+FJu217b5xiN036eFzxNu2DQvmHHR3hY79dJr6V7aa4vORvCZtOzYEUDGC6MS9rqVo4BtRza9K8U5vcu10c9LZw01rLwStv4+ffJGlBvLLg9ZYcVeg4K8BZqfhRI7XQYEvDwdGmXuZDLgKkNoDowqTQYr6Zbi3nnT0aRvQWxYMHKA97niHEhVDQWENJxJ5wNBWXrNNGUoSnFOOXnbv2ur9L5NUqTfgaKBHW0lH1IX22rxezktBbGbEl5lronJky0S8xppUXnOu01U9GOK3EjxdTbLuUzMnKkgG4+KXRezwQKa9BUSvX0ko3c1/jy3wRqmlm78qMlmurRbmLJCNDMNzojGOwcYRuFw6N7Uvm4M2BFix3wg5pbDrWKDehuApQt56Go5udeis+zXRA5t9rC3A3iG/7qg4hXpQTu07L67e5y+p02pjVjyRd23bbeO/th/NPBooNlS0HxIMMHWQHOw0YuV8SIvQxuDBBAfMw2vOhpFa1wGOB0r5fi7FEV0IEOc0VrUNDqgHCvPivnfEq+pqStGGL2srb9LJ+RmXDdZKXNUi23jLUnfo8t7HnocqBW4xjampo0AknSTrWeHKnnJK3EGzHuhx3sugwWX6RCWg1BNK0w0L432XHMNkWPNy0jBiCrSHhpe3/ACucNRCpaWn1GotKCvfN+tnb64zbJYUOE1qnxS8f8HlbesNwIMJsMVreeaMp2ue781k4EWYYM6xzosFxoWhsN/KGlRjhzYLDbNoSsCM5sNzZ0jxYjXX4biRUYkGprpxWTgXaESJaDWPFwBpPJ0uBpq3mOPeui0UNVC0Z7LdtK7+b9HjudJpqNSnFRb+/6nkeFHlM/wCc4X3oa6lXLfCfymf85wvvQ11MrYmlqKqICiKtEogKIq0SiApRFWiICqIiAIiIAiIgCgr4Snytmerj++Ep1UFfCU+Vsz1cf3wkBZYHki/1rvxLV5a158RzDLWubcZc8I3icSdP0r1NgeSL/Wu/EtXh0BLHFI6C2zLQdMAcjDmRHiVF7wWQ4bgSG4mhZo7FljWa+ZtmzrUZGhzEjMRDDgFrXMMLk2RHBjmux0sea6wcBgvP8W1pSwlrSkpmPDlsqg0hxIpDWVLHsdiSBUVaaVxx1LbO4WSUm6zJOWiGPLyUblI8yB4JLmRGOLQPGxivcaYaAKqz4fUcYy5b8zUl4cvK4u+fCXMopZzhMza5o+M+xIDJiamcugumIkUf2Rl50RowGLgaNIArQgKPhDUp8NpKySJuayvKZmZdfloUB0NzWGgrfpXCoJNaYGgFcVHIhLs+E1lLTRy3tlrl8FtjKW13kk0dPzK5JfDFuTcG7Nl4WDZgQ3xP8wcwxTX/AMy0/Qvk4l5iJFtGOYr3RXZEWBz3OebrYkKgqeYaltYcSVtWyZWWiTMGVmJUta4Ri1tWMaWVAJF4FpacOcUX0cDoFnSlplkpMF7MjdDiRYroVx8XlIZow0FcAThh9qp51VHR16MovnvUbw+t78zxlWSNX5Fk7p3Xl0MvCi0peA+WsprXg8rDiOe5guve5wuEaAca9gLQObD6OH8GXbGMeNNwoT2QodyXxfGeWPiO0A1AN6gNKYLR23b0tMsgxH1E/JTADCG32R4LXg1vDAYAHHnrTSt5wig2ZNvyyNMVbk4Y2DCdDEa8C5wJaa0PhUxAGGJUZQdGVNyUl/uUrLmbldPGNpWWe68CTHQSbjzxlZ3WE27ra3dPBl4vnCFAmJqISIdIYq66KNDBU6dHir7LXseHlDi53jkODdApz8+uq0VlW7Dk7Ie6G6C6MY9WwX0ecboqWVBIo2oPoV87wthzMtKOET+0DCPCukAOpQurSmJFQAf5uxcZ+K7aj82KlZrK87XVvbPpc3Vvw7CtLknT5oKbjd+S3tbbdX2ba23PY21BaYkN50gYd/8Aus840NjsiaOY91PcVpLRtWHEhS74cRjnFtHtaQS11G1BHNiCvstedY7kixwdVuN0g00aftXP66coS1VSLV1KjOPfx+e5Gjo1eLay3K/deJ8vDImWs60ogqS8BrQdHhlrKDsq8rzfDixYMaTsrl56BJNgSpFIrS98VxZB8RgIJpdxpXxgvv4xp5sxZboUNzXxXRWB8MfxHi4S41aMdLRj2rVT8ayrSlbPjTs62XMnBdDjy7S0RnPLWAtAxNKw6igNQcKLpqEqclenazV/R3f6/UiuPLgiqA8Ne12kNeHYEtJANcDpC9dwOmxGtVsQAtBhUoaE+CGDm9C8nOcnykTkb/I33clylOU5Opu3qYXqUrReh4uf7wZ6t3vapBg0XCfymf8AOcL70NdTLlnhP5TP+c4X3oa6mQBERAEREAREQBERAEREAREQBERAFBXwlPlbM9XH98JTqoK+Ep8rZnq4/vhICywPJF/rXfiWrw69xYHki/1rvxLV4dZWQCsrYBxvd1R+a+hkNgqW+F3+5XtZ9C6fR8CgrTryUvJZXq7Z+nfwtqHDb/FN37GIMV7YaztZiFs7WkWwntaytCwON4gkGrhpAGpdFKqk1Hr+hbwoK6X8watsPtWeHCNcK17Fe1iyclXxvFWudRrYsaentsixj2E0Dm1/rxdayRo7WjwnrNAlWvewEYh1GnHCuGhZZ+ThwwHQw0YgO0PreBpiAMcMfTpNVT6rU1IJptXffbsSIKpB8rcU3s87du9/H22NJFnAR4DXOGut1vcqwOVOF4Q284bQuoskWITpJPpKxQziuD19R87eG+tjZLRzqL/Wqya/4q0F8vi/9HqrMmLjQK4DWalbKLaxaw8nR0TmBrQdpovMShqWgnSQObnParuEM42XjcnDqaNDjeINCRo0BUEdA607pX/niVHEpwoKzx0/sZLQEaNjFjGnRhi6PQFo5qVhM5yT2ke4LBHtGI/SaDUKr5SVf6fTTpqzaS6JWOTq1ISeF6sq4jmXpeLn+8Gerd72rzC9Pxc/3gz1bve1TUaDRcJ/KZ/znC+9DXUy5Z4T+Uz/AJzhfehrqZZAREQBERAEREAREQBERAEREAREQBQV8JT5WzPVx/fCU6qCvhKfK2Z6uP74SAssDyRf6134lq8OpT4rbPhTPB9kCMKw4kSKHAEtOEUkEEdoC+zNpJdJ/wBdyAjGXAutp/71nWs4CkyX4vJRnivdjrdX3rN8RJfX9jfyXU6bjdCFKMZRaaSWErY9S/0/FKEIRjJO6VsJeGOpGLWrIApLHAaX6X2N/JV+JEDpfY38ls/rum6S9l9ybHjekXhL2X7iOGhZYLmhwv1u/wA12l6nZVSH8SoHS+xv5IeBMDpfY38lqnxrTtYUvZfc3/1/SWtafsv3HgnPgc3KDnr4OH9YKkxMQXeO+MaaL111Nek61708CJfpfd/JWHgJLn+Y94/JVOp1kKm1/l9zC49o1/2ey/cRtNCDSkPlL3+el3t0LWPjtB03v9ODVK7+LyUOl7se3/ZYzxaSfSf9dypp6dTleRH1f4jfLy6ZNecrX9M/N37EUvnXHAYBfKSpezaSXSf9dyZtJLpP+u5bIU4wVoqxzdfUVa8uapK7IhRS9m0kuk/67kzaSXSf9dy9mkiFen4uf7wZ6t3vavb5tJLpP+u5ffY3AiWlYwjQ3OvAUxcTgafkEBDnCfymf85wvvQ11MuWOE3lM/5zhffhrqdAEREAREQBERAEREARYb6rfQGVUqsZcqXkBlqrXxANKsvLHGxBBFa60Blyhvaoz43+Bk1az5N0ryQEBkRr+Ve6GavMOlKNNfFK9HNWdM3jcfhzCrisOQznS+1yyCIBxNWqND5YeiPEH/zVx4m7W6cvt4u7Uu5BOdL7XK+NKzjqYhtBTAuQEP5nLW6cvt4u7VMzlrdOX28XdqXsgnOl9rlTIJzpfa5ARFmctbpy+3i7tMzlrdOX28XdqXcgnOl9pTIZvpHvcgIizOWt05fbxd2mZy1unL7eLu1L2QTfSPe5Mgm+ke9yGCIczdrdOX28Xdqp4m7W6cvt4u7Uu5DOdL7XLJGlptxrWmFKAuogIdzOWt05fbxd2mZy1unL7eLu1L2QTfSPe5Mgm+ke9yAiHM5a3Tl9vF3aZnLW6cvt4u7UvZBN9I97kyCb6R73ICIczlrdOX28Xdq9nEzax/5ksPTHi7tS3kM30j3lZpWXmmkl1XVGFCRTFDJEsfiYtKjOTiwSeTBiB8aIP4tTeDaM8WlNKw5lrW/xZXbxt2pnuzFNBrSla+n8wlyZro18/wDp/I96wCILM4n7TgzMvGe6VLYceHFdSLEc66x4JpWGKmgXQOUN7V5idlJoltx2FMcScSSV87LPnD/PT6SgPXtigmmKyVWrsuAYbaPxf0qk+9bC8gMlUqsd5LyAyVSqxXkvIDLVFivIgLbqUWa6l1AYaJRZrqXUBholFmupdQGG6tdaUElzaE+LzYc6291YosKpQGhyZ2s95TJnaz3lb1sEagq8kNQQGhyZ2s95TJnaz3lb7khqCckNQQGhyZ2s95TJnaz3lb7khqCckNQQGhyZ2s95TJnaz3lb7khqCckNQQGhyU6z3pkp1lb7khqCckNQQGhyU6ymTO1nvK33JDUE5IaggNDkztZ7ymTO1nvK33JDUE5IaggNDkztZ7ymTO1nvK33JDUE5IaggNDkztZ7ymTO1nvK33JDUE5IaggNBkztZ7yt/RWmAs11AY6Ist1LqAw0SizXUuoDDRKLNdS6gMNEWa6iAizPzZXV7Q2ctvkz82V1e0NnLb5c5KT+K7gdKTkJkaYZF5Vszfh33QRAjQ4USBfhtgkF0UfxCHuNGi8wCpJQHvs/NldXtDZy2+TPzZXV7Q2ctvloY/FxZjmRph7JqGYfKxHwWxYDC4XHRWXWta7kmeDRoOJaQSBgqO4rrMLm3TNBpnDKkOiQyaNjTUNzgbnPyLfQgN/n5srq9obOW3yZ+bK6vaGzlt8uckQHRufmyur2hs5bfJn5srq9obOW3y5yRAdG5+bK6vaGzlt8mfmyur2hs5bfLnJEB0bn5srq9obOW3yZ+bK6vaGzlt8uckQHRufmyur2hs5bfJn5srq9obOW3y5yRAdG5+bK6vaGzlt8mfmyur2hs5bfLnJEB0bn5srq9obOW3yZ+bK6vaGzlt8uckQHRufmyur2hs5bfJn5srq9obOW3y5yRAdG5+bK6vaGzlt8mfmyur2hs5bfLnJEB0bn5srq9obOW3yZ+bK6vaGzlt8uckQHRufmyur2hs5bfJn5srq9obOW3y5yRAdG5+bK6vaGzlt8mfmyur2hs5bfLnJEB0bn5srq9obOW3yZ+bK6vaGzlt8uclcwiororjTTTnQHRefmyur2hs5bfJn5srq9obOW3ygsZAa1ypmkgfwyKY0A56nwdPbisbskADXMmBEa5wePBaaYgA1OBHg1w5igJ4z82V1e0NnLb5M/NldXtDZy2+UFPfJaQyMG39FQHmHTXiKgg9+jmWpdSpporhzYIDovPzZXV7Q2ctvkXOSIAt/Y/DC0JSEIMtMvhQb5iBgENwDjdrS8DQeC000VFURAfTG4fWo9hhunHuYWXC0tg4tLS0jxdTiPRTUFtuDXGjOSroro96cLyXsaXtgMZEc98RznNazw6veTSo5xoKIgPAoiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiALZWTbkzKX8mimFyhaX0DDeuEltag6yqogPsfwvn3FhdMucYbnOYXNhG651Q4irdNHEegkLLD4bT4LCY95rHB1wthhjiK0vBoFRicOfnREBgg8LrQY0MZMua0YCjYdcO27XnWnjRC9znONXOcXOOAqSanAIiAxIiID/2Q==" style="width:500px;height:600px;">
+                
+                <br><br>
+                <!---
+                <button id="btn" onclick="showAlert()">Press me for a message!</button>
+                <br><br>
+                <script>
+                function showAlert()
+                {
+                    alert("Computers are the future of the World!")
+                    var heading3 = document.getElementById("heading3");
+                    heading3.style.color = "red";
+                }
+                </script>
+            -   -->
+                
+            <br><br>
+            </div>
+        
+            <div class ="column">
+                <p style="font-size: large;"><b>Want to register for the Web Development Club at Uni? Then complete the form below!</b></p>
+                <h2>Registration -Please fill in your identity </h2>
+                <label for="name">Full Name :</label>
+                <input type="text" id="name" name="fname"><br>
+                <label for="lname">Student ID : </label>
+                <input type="text" id="lname" name="lname">
+                </form>
+                <p style="font-size:small;"><a href="https://www.deakin.edu.au/">Click here for more information</a></p>
+                <input type="checkbox" id="tnc" name="tnc" value="read">
+                <label for="tnc"> I have read the terms and conditions</label><br> <br>
+                <input onclick="submit()" type="submit" value="Submit">
+                <script>
+                function submit() {
+                alert("Submitted!");
+                }
+
+                </script>
+                <br>
+                <p>Please check out the schedule below. The club runs classes everyday on the listed topics.</p>
+
+                <h2>Schedule</h2>
+    
+                <table style="width:50%">
+                <tr>
+                    <th>Bootcamp Topic</th>
+                    <th>Time</th>
+                    <th>Your Tutor</th>
+                </tr>
+                <!—Contents of the table -->
+                <tr>
+                    <td>
+                        <center>HTML, CSS, Basic JS</center>
+                    </td>
+                    <td>
+                        <center>2:00 pm</center>
+                    </td>
+                    <td>
+                        <center>Abraar Mohiuddin</center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center> Advanced JS, Frameworks </center>
+                    </td>
+                    <td>
+                        <center>5:00 pm</center>
+                    </td>
+                    <td>
+                        <center>Shiva Pokhrel</center>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+            <p>Registrations end on 12th September. Click the button to check the date today! </p>
+
+            <button onclick="getDate()">Get The Date</button>
+            <p id="GetTheDate"></p>
+            <br><br>
+        </div>  
+    </div>
+
+    </body>
+</html>
+<script src="./todo.js"></script>
